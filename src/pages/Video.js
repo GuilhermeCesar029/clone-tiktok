@@ -8,14 +8,12 @@ function Video() {
 
     function handdleStart(){
 
-        if(play == false){
-            videoRef.current.play()
-            setPlay(true)
-        }
-
-        if(play == true){
+        if(play){
             videoRef.current.pause()
             setPlay(false)
+        }else {
+            videoRef.current.play()
+            setPlay(true)
         }
         
     }
